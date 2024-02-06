@@ -35,7 +35,7 @@ RUN mvn --version
 RUN mvn clean package
 
 # Define a volume to mount to the host directory
-#VOLUME ["/app/target"]
+VOLUME ["/app/opt"]
 
 # Define the command to run the container
 CMD ["/bin/bash"]
