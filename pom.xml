@@ -11,6 +11,8 @@
     <properties>
         <!-- Define the Maven version -->
         <maven.compiler.version>3.9.6</maven.compiler.version>
+        <!-- Define Java version -->
+        <java.version>11</java.version>
     </properties>
 
     <build>
@@ -22,14 +24,15 @@
                 <version>${maven.compiler.version}</version>
                 <configuration>
                     <!-- Define the Java version -->
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
     <dependencies>
+        <!-- Servlet API -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
