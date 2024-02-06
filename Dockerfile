@@ -38,5 +38,5 @@ RUN mvn clean package
 #VOLUME ["/app/target"]
 
 # Define the command to run the container
-CMD ["java", "-jar", "target/*.war"]
+CMD ["/bin/bash"]
 
