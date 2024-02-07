@@ -1,4 +1,4 @@
-#Use CentOS as the base image
+# Use CentOS as the base image
 FROM centos:7
 
 # Install required dependencies and Maven
@@ -21,7 +21,6 @@ ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 # Create a directory in the container for the project
 RUN mkdir /app/
 
-
 # Copy local files to the container
 COPY  pom.xml /app/.
 COPY  src     /app/src
@@ -31,12 +30,11 @@ WORKDIR /app
 # Check Maven version
 RUN mvn --version
 
-# Build the .war file using Maven
-RUN mvn clean package
+# Build the .war file using Maven and set the name to ROOT.war
+RUN mvn clean package -DfinalName=ROOT
 
 # Define a volume to mount to the host directory
 VOLUME ["/app/opt"]
 
 # Define the command to run the container
 CMD ["/bin/bash"]
-
