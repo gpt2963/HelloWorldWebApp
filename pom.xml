@@ -16,6 +16,7 @@
     </properties>
 
     <build>
+        <finalName>ROOT</finalName> <!-- Set the finalName to ROOT -->
         <plugins>
             <!-- Define the Maven compiler plugin -->
             <plugin>
