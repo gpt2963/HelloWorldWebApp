@@ -31,7 +31,7 @@ WORKDIR /app
 RUN mvn --version
 
 # Build the .war file using Maven and set the name to ROOT.war
-RUN mvn clean package -DfinalName=ROOT
+RUN mvn clean package 
 
 # Define a volume to mount to the host directory
 VOLUME ["/app/opt"]
